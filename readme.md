@@ -30,3 +30,7 @@ Once you are happy simply continue with the rebase as normal.
 ## Updating
 
 A simple `git pull` will update you to the latest.
+
+## Troubleshooting
+
+If you are having trouble just rebuild the .sln in whatever version of VS that you have and that should resolve most issues. I haven't tried this on any other versions of .net (it's currently build for .net 4.5) but I would imagine it will work with 4.0. Eventually I will deploy this for other versions of .net and setup a better build process.
