@@ -7,6 +7,7 @@ I created this because I was having a hard time rebasing my blueprint files and 
 ## Installing
 
 1) `git clone https://github.com/ruba1987/UDiff.git`
+
 2) Add C:\the\repo\dir\bin to your PATH
 
 ## Commands {WIP}
