@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "git-udiff", "git-udiff\git-udiff.csproj", "{7C60DE61-7A94-45A0-AA58-1695A470D1A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "git-umerge", "git-umerge\git-umerge.csproj", "{A99727AF-D9A5-4462-B350-919D64F74B2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7C60DE61-7A94-45A0-AA58-1695A470D1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C60DE61-7A94-45A0-AA58-1695A470D1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C60DE61-7A94-45A0-AA58-1695A470D1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99727AF-D9A5-4462-B350-919D64F74B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99727AF-D9A5-4462-B350-919D64F74B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99727AF-D9A5-4462-B350-919D64F74B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99727AF-D9A5-4462-B350-919D64F74B2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
