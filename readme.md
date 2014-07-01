@@ -1,6 +1,5 @@
 # UDiff
-
-A UASSET diff/merge helper tool for git
+### A UASSET diff/merge helper tool for git
 
 I created this because I was having a hard time rebasing my blueprint files and Epic provides a nice tool to diff blueprint files in the editor but there is no support for git in the editor. The use case I am programming for is when you are mid rebase and have to merge two blueprint files.
 
