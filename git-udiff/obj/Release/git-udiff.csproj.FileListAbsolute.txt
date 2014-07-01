@@ -1,0 +1,5 @@
+C:\git\UDiff\bin\git-udiff.exe.config
+C:\git\UDiff\bin\git-udiff.exe
+C:\git\UDiff\bin\git-udiff.pdb
+C:\git\UDiff\git-udiff\obj\Release\git-udiff.exe
+C:\git\UDiff\git-udiff\obj\Release\git-udiff.pdb
