@@ -1,4 +1,5 @@
 ﻿using System;
+using GitSharp;
 
 namespace git_udiff
 {
@@ -6,10 +7,14 @@ namespace git_udiff
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("I work with args");
-            foreach (var s in args)
+            var repo = new Repository(Environment.CurrentDirectory);
+            var i = new Index(repo);
+
+
+            Console.WriteLine(Environment.CurrentDirectory);
+            foreach (var conflict in repo.Status.MergeConflict)
             {
-                Console.WriteLine(s);
+                Console.WriteLine(conflict);
             }
         }
     }
