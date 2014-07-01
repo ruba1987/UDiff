@@ -1,4 +1,6 @@
 obj
-bin
 *.swp
 *.suo
+*.vshost*
+*.pdb
+packages
