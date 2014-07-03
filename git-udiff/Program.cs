@@ -33,6 +33,8 @@ namespace git_udiff
                     }
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine(File.ReadAllText(Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "helpfiles", "diffsetupcomplete.txt")));
         }
 
         static void Setup()
@@ -46,8 +48,6 @@ namespace git_udiff
             }
 
             tempDir = Directory.CreateDirectory(Path.Combine(contentDirs[0], "UDiff")).FullName;
-
-            Environment.SetEnvironmentVariable("UDiffTempDir", tempDir);
         }
     }
 }

@@ -1,0 +1,3 @@
+﻿Your files have been staged for a manual merge. They should automatically appear in your project in the new UDiff folder in the root of your "Game" directory. If not, you should be able to find them in /Content/UDiff.
+
+Now that your files have been setup, use the diff tools provided by Epic in the editor to merge the changes from one file into the other. Once you are done delete the file that you no longer need.

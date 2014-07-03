@@ -1,0 +1,1 @@
+Once you have manually merged your files, delete teh ones that you no longer need.
