@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using LibGit2Sharp.Core;
 using LibGit2Sharp;
+using System.Linq;
 
 namespace git_udiff
 {
@@ -10,21 +10,29 @@ namespace git_udiff
         static string tempDir;
         static void Main(string[] args)
         {
-
+            Setup();
             using (var repo = new Repository(Environment.CurrentDirectory))
             {
-                foreach (var item in repo.Index.RetrieveStatus())
+                if (repo.Index.Conflicts.Any())
+                    Console.WriteLine("Found UASSET conflicts. Building folder for diff");
+
+                foreach (var conflict in repo.Index.Conflicts.Where(x => x.Ours.Path.EndsWith(".uasset")))
                 {
-                    if (item.State.HasFlag(FileStatus.Removed) && item.State.HasFlag(FileStatus.Untracked))
+                    Console.WriteLine("Setting up diff files for " + conflict.Ours.Path);
+                    var a = repo.Lookup<Blob>(conflict.Ours.Id);
+                    var b = repo.Lookup<Blob>(conflict.Theirs.Id);
+
+                    using (FileStream fileStream = File.Create(Path.Combine(tempDir, Path.GetFileNameWithoutExtension(conflict.Ours.Path) + "_a" + Path.GetExtension(conflict.Ours.Path))))
                     {
-                        Console.WriteLine(item.FilePath);
-                        Console.WriteLine(item.HeadToIndexRenameDetails.
+                        a.GetContentStream().CopyTo(fileStream);
+                    }
+
+                    using (FileStream fileStream = File.Create(Path.Combine(tempDir, Path.GetFileNameWithoutExtension(conflict.Theirs.Path) + "_b" + Path.GetExtension(conflict.Theirs.Path))))
+                    {
+                        b.GetContentStream().CopyTo(fileStream);
                     }
                 }
             }
-
-            Setup();
-
         }
 
         static void Setup()
